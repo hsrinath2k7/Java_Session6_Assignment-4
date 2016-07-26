@@ -1,0 +1,101 @@
+//Abstract Class
+
+package Session6;
+
+public abstract class Students {
+	
+	String name;
+	
+	int rollnumber;
+	
+	int regnumber;
+	
+	
+	abstract void StudentDetails();
+	
+
+}
+
+
+// Extended Class
+
+package Session6;
+
+public class StudentEntry extends Students {
+	
+	public StudentEntry(String name, int roll, int reg) {
+		// TODO Auto-generated constructor stub
+		
+		this.name = name;
+		this.rollnumber = roll;
+		this.regnumber = reg;
+	}
+	
+	@Override
+	void StudentDetails() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Student Name: " + this.name);
+		System.out.println("Roll Number: " + this.rollnumber);
+		System.out.println("Registration Number: " + this.regnumber);
+		
+		System.out.println(" ");
+		
+	}
+
+}
+
+// Main Class
+
+package Session6;
+
+
+
+public class StudentDetailsPrint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+			
+		System.out.println("Student details: ");
+		
+		
+		
+		StudentEntry sp1 = new StudentEntry("John", 101, 456);
+		
+		sp1.StudentDetails();
+
+		StudentEntry sp2 = new StudentEntry("Rick", 102, 789);
+		
+		sp2.StudentDetails();
+		StudentEntry sp3 = new StudentEntry("Smith", 103, 654);
+		
+		sp3.StudentDetails();
+		StudentEntry sp4 = new StudentEntry("Tony", 104, 321);
+		
+		sp4.StudentDetails();
+	
+}
+}
+
+
+/* Output
+
+Student details: 
+Student Name: John
+Roll Number: 101
+Registration Number: 456
+ 
+Student Name: Rick
+Roll Number: 102
+Registration Number: 789
+ 
+Student Name: Smith
+Roll Number: 103
+Registration Number: 654
+ 
+Student Name: Tony
+Roll Number: 104
+Registration Number: 321
+
+*/
